@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title desc">
+<title id="title">THE MERCURY JUPITER EVENTS</title><desc id="desc">Logo of The Mercury Jupiter Events with THE in red, MERCURY in sky blue, JUPITER in yellow and EVENTS in pink.</desc>
+<defs>
+ <linearGradient id="gold" x1="0" x2="1"><stop stop-color="#e4bd24"/><stop offset=".5" stop-color="#ffd84a"/><stop offset="1" stop-color="#c99616"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-opacity=".18"/></filter>
+</defs>
+<rect width="800" height="800" rx="400" fill="#fffdf9"/>
+<circle cx="400" cy="400" r="365" fill="none" stroke="url(#gold)" stroke-width="9"/>
+<circle cx="400" cy="400" r="347" fill="none" stroke="#e4bd24" stroke-width="2"/>
+<g filter="url(#shadow)" font-family="Georgia, 'Times New Roman', serif" font-weight="700" text-anchor="middle">
+ <text x="400" y="238" font-size="116" fill="#d71920">THE</text>
+ <text x="400" y="355" font-size="91" fill="#79bfe0">MERCURY</text>
+ <text x="400" y="468" font-size="105" fill="#e4bd24">JUPITER</text>
+ <text x="400" y="590" font-size="101" fill="#e78bb5">EVENTS</text>
+</g>
+<g fill="none" stroke="url(#gold)" stroke-width="8" stroke-linecap="round">
+ <path d="M275 142 Q400 75 525 142"/>
+ <path d="M270 635 Q400 690 530 635"/>
+</g>
+<path d="M400 75 L420 105 L450 112 L425 132 L430 163 L400 147 L370 163 L375 132 L350 112 L380 105 Z" fill="url(#gold)" stroke="#b98a16" stroke-width="3"/>
+<g transform="translate(400 514)">
+ <circle r="30" fill="url(#gold)" stroke="#b98a16" stroke-width="3"/>
+ <ellipse rx="55" ry="18" fill="none" stroke="#b98a16" stroke-width="6" transform="rotate(-12)"/>
+</g>
+<g fill="url(#gold)">
+ <path d="M158 622 Q185 585 220 575 Q201 610 176 638 Z"/>
+ <path d="M642 622 Q615 585 580 575 Q599 610 624 638 Z"/>
+ <path d="M145 650 Q175 625 207 626 Q185 650 160 667 Z"/>
+ <path d="M655 650 Q625 625 593 626 Q615 650 640 667 Z"/>
+</g>
+</svg>
