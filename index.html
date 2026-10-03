@@ -147,21 +147,145 @@
 <footer class="footer"><div class="wrap"><div class="footergrid"><div><img src="./assets/logo-rond-officiel.jpg?v=3" alt="THE MERCURY JUPITER ÉVÉNEMENTS — logo officiel rond" style="width:115px;height:115px;object-fit:contain;display:block;margin-bottom:18px"><div class="eyebrow">THE MERCURY JUPITER ÉVÉNEMENTS</div><h3>Événements & Événementiels</h3><p style="margin-top:14px">Votre vision. Notre créativité. Une expérience inoubliable.</p></div><div><div class="eyebrow">Navigation</div><p style="margin-top:14px"><a href="#apropos">À propos</a><br><a href="#services">Services</a><br><a href="#experiences">Expériences</a><br><a href="#red-label">Red Label</a><br><a href="#vision2040">Vision 2040</a><br><a href="#contact">Contact</a></p></div><div><div class="eyebrow">Présence numérique</div><p style="margin-top:14px"><a href="https://www.instagram.com/abbigaellecarlannevenementiels" target="_blank" rel="noopener">Instagram</a><br><a href="https://wa.me/50937469553" target="_blank" rel="noopener">WhatsApp</a><br><a href="mailto:carlanne.abbigaelleevents@gmail.com">Email</a></p><p style="margin-top:25px" class="small">Mentions légales • Politique de confidentialité • Conditions générales • Informations légales</p></div></div>
 <div class="footerbottom"><span>© 2026 THE MERCURY JUPITER ÉVÉNEMENTS</span><span>CONSTRUIRE DES EXPÉRIENCES. CRÉER DES MOMENTS. CONSTRUIRE L’AVENIR.</span></div></div></footer>
 <script>
-const nav=document.querySelector('.navlinks');document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
-const form=document.getElementById('eventForm'),steps=[...form.querySelectorAll('.form-step')],titles=['VOS INFORMATIONS','VOTRE ÉVÉNEMENT','SERVICES SOUHAITÉS','SERVICES COMPLÉMENTAIRES','VOTRE VISION','VOTRE BUDGET','CALENDRIER DE PLANIFICATION','COMMENT AVEZ-VOUS CONNU MERCURY JUPITER ?','INFORMATIONS SUPPLÉMENTAIRES','VÉRIFICATION DE VOTRE DEMANDE'];let current=0;
-const err=document.getElementById('formError'),prev=document.getElementById('prevStep'),next=document.getElementById('nextStep'),submit=document.getElementById('submitStep'),label=document.getElementById('formStepLabel'),title=document.getElementById('formStepTitle'),bar=document.getElementById('formProgressBar');
-const selected=n=>form.querySelector('[name="'+n+'"]:checked')?.value||'';
-function conditional(){form.querySelectorAll('.conditional').forEach(x=>x.classList.remove('show'));const show=(sel)=>form.querySelector(sel)?.classList.add('show');if(document.getElementById('eventType')?.value==='Autre')show('[data-show-if="eventType=Autre"]');if(selected('Lieu choisi')==='Oui')show('[data-show-if="Lieu choisi=Oui"]');if([...form.querySelectorAll('[name="Services souhaités"]:checked')].some(x=>x.value==='Autre'))show('[data-show-if="service=Autre"]');if(document.getElementById('additionalOther')?.checked)show('[data-show-if="additional=Autre"]');if(selected('Style recherché')==='Autre')show('[data-show-if="style=Autre"]');if(selected('Fournisseurs choisis')==='Oui')show('[data-show-if="vendors=Oui"]');if(selected('Source Mercury Jupiter')==='Autre')show('[data-show-if="source=Autre"]');form.querySelectorAll('.conditional').forEach(x=>{const i=x.querySelector('[data-conditional-required]');if(i)i.required=x.classList.contains('show')})}
-function validate(i){conditional();const s=steps[i];if(i===2&&!s.querySelector('[name="Services souhaités"]:checked'))return'Veuillez sélectionner au moins un service.';if(i===3){const no=document.getElementById('noAdditional'),other=[...s.querySelectorAll('#additionalServices input[type="checkbox"]')].filter(x=>x!==no);if(no.checked&&other.some(x=>x.checked))return'« Aucun service complémentaire » ne peut pas être sélectionné avec d’autres services.'}if(!s.checkValidity()){const b=s.querySelector(':invalid');if(b?.name==='Nombre d’invités'&&b.value>900)return'Le nombre maximum d’invités est de 900.';if(b?.name==='Nombre d’invités'&&b.value<1)return'Le nombre minimum d’invités est de 1.';if(b?.type==='email')return'Veuillez vérifier cette adresse e-mail.';return'Ce champ est obligatoire. Veuillez compléter cette information.'}return''}
-function summary(){const names=[['Informations personnelles',['Nom complet','Email','Téléphone','Moyen de contact préféré','Entreprise / Organisation']],['Type d’événement',['Type d’événement','Précisez le type d’événement','Nom de l’événement','Date prévue de l’événement','Date flexible','Ville / Pays','Lieu choisi','Nom du lieu','Nombre d’invités','Configuration souhaitée']],['Services',['Services souhaités','Précisez le service souhaité','Services complémentaires','Précisez le service complémentaire']],['Vision',['Description de l’événement','Thème souhaité','Style recherché','Précisez le style','Couleurs souhaitées','Ambiance recherchée','Demandes particulières']],['Budget',['Budget estimatif','Budget flexible','Informations budget']],['Calendrier',['Début de planification','Préparatifs commencés','Fournisseurs choisis','Fournisseurs confirmés','Lieu réservé']],['Source',['Source Mercury Jupiter','Précisez source']],['Informations supplémentaires',['Autres informations']]];const safe=v=>String(v).replace(/[&<>\"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[m]));let h='';names.forEach((g,gi)=>{let rows='';g[1].forEach(n=>{const es=[...form.querySelectorAll('[name="'+n+'"]')],vs=es.filter(x=>x.type==='checkbox'||x.type==='radio').length?es.filter(x=>x.checked).map(x=>x.value):es.map(x=>x.value).filter(Boolean);if(n==='Demandes particulières'&&document.getElementById('noSpecial')?.checked)vs.push('Aucune demande particulière pour le moment');if(n==='Autres informations'&&document.getElementById('noMoreInfo')?.checked)vs.push('Aucune information supplémentaire pour le moment');if(vs.length)rows+='<div class="summary-item"><div><strong>'+safe(n)+'</strong>'+vs.map(safe).join(', ')+'</div><button type="button" data-edit="'+gi+'">MODIFIER</button></div>'});if(rows)h+='<h5 style="font-family:Cormorant Garamond,serif;font-size:1.2rem;margin:16px 0 4px">'+g[0]+'</h5>'+rows});document.getElementById('formSummary').innerHTML=h;document.querySelectorAll('[data-edit]').forEach(b=>b.onclick=()=>{current=+b.dataset.edit;render();form.scrollIntoView({behavior:'smooth',block:'start'})})}
-function render(){conditional();steps.forEach((s,i)=>s.classList.toggle('active',i===current));label.textContent=String(current+1).padStart(2,'0')+' / 10';title.textContent=titles[current];bar.style.width=((current+1)*10)+'%';prev.style.display=current?'inline-flex':'none';next.style.display=current===9?'none':'inline-flex';next.disabled=current===9||!!validate(current);submit.style.display=current===9?'inline-flex':'none';submit.disabled=current!==9||!!validate(9);if(current===9)summary();err.classList.remove('show');err.textContent=''}
-function goNext(){const m=validate(current);if(m){err.textContent=m;err.classList.add('show');return}if(current<9){current++;render();form.scrollIntoView({behavior:'smooth',block:'start'})}}
-form.addEventListener('input',()=>{conditional();next.disabled=current===9||!!validate(current);if(current===9){summary();submit.disabled=!!validate(9)}});form.addEventListener('change',()=>{conditional();next.disabled=current===9||!!validate(current);if(current===9){summary();submit.disabled=!!validate(9)}});
-document.getElementById('noSpecial')?.addEventListener('change',e=>{const t=form.querySelector('[name="Demandes particulières"]');t.required=!e.target.checked;if(e.target.checked)t.value='Aucune demande particulière pour le moment'});
-document.getElementById('noMoreInfo')?.addEventListener('change',e=>{const t=form.querySelector('[name="Autres informations"]');t.required=!e.target.checked;if(e.target.checked)t.value='Aucune information supplémentaire pour le moment'});
-document.getElementById('noAdditional')?.addEventListener('change',e=>{if(e.target.checked)[...document.querySelectorAll('#additionalServices input[type="checkbox"]')].forEach(x=>{if(x!==e.target)x.checked=false})});
-document.getElementById('additionalOther')?.addEventListener('change',e=>{if(e.target.checked)document.getElementById('noAdditional').checked=false});
-prev.onclick=()=>{if(current){current--;render();form.scrollIntoView({behavior:'smooth',block:'start'})}};next.onclick=goNext;
-form.addEventListener('submit',e=>{const m=validate(9);if(m||!form.checkValidity()){e.preventDefault();err.textContent=m||'Veuillez vérifier les informations avant de continuer.';err.classList.add('show');return}submit.textContent='PRÉPARATION DE VOTRE DEMANDE…';submit.disabled=true});
+(function(){
+const form=document.getElementById('eventForm');
+if(!form)return;
+const steps=[...form.querySelectorAll('.form-step')];
+const titles=['VOS INFORMATIONS','VOTRE ÉVÉNEMENT','SERVICES SOUHAITÉS','SERVICES COMPLÉMENTAIRES','VOTRE VISION','VOTRE BUDGET','CALENDRIER DE PLANIFICATION','COMMENT AVEZ-VOUS CONNU MERCURY JUPITER ?','INFORMATIONS SUPPLÉMENTAIRES','VÉRIFICATION DE VOTRE DEMANDE'];
+let current=0;
+const err=document.getElementById('formError');
+const prev=document.getElementById('prevStep');
+const next=document.getElementById('nextStep');
+const submit=document.getElementById('submitStep');
+const label=document.getElementById('formStepLabel');
+const title=document.getElementById('formStepTitle');
+const bar=document.getElementById('formProgressBar');
+
+function checked(name){return form.querySelector('[name="'+CSS.escape(name)+'"]:checked')?.value||'';}
+function values(name){return [...form.querySelectorAll('[name="'+CSS.escape(name)+'"]')].filter(x=>x.checked).map(x=>x.value);}
+function showConditional(box,show){
+  box.classList.toggle('show',show);
+  const input=box.querySelector('[data-conditional-required]');
+  if(input){input.required=show;if(!show)input.setCustomValidity('');}
+}
+function updateConditionals(){
+  form.querySelectorAll('.conditional').forEach(x=>showConditional(x,false));
+  showConditional(form.querySelector('[data-show-if="eventType=Autre"]'),document.getElementById('eventType')?.value==='Autre');
+  showConditional(form.querySelector('[data-show-if="Lieu choisi=Oui"]'),checked('Lieu choisi')==='Oui');
+  showConditional(form.querySelector('[data-show-if="service=Autre"]'),values('Services souhaités').includes('Autre'));
+  showConditional(form.querySelector('[data-show-if="additional=Autre"]'),document.getElementById('additionalOther')?.checked===true);
+  showConditional(form.querySelector('[data-show-if="style=Autre"]'),checked('Style recherché')==='Autre');
+  showConditional(form.querySelector('[data-show-if="vendors=Oui"]'),checked('Fournisseurs choisis')==='Oui');
+  showConditional(form.querySelector('[data-show-if="source=Autre"]'),checked('Source Mercury Jupiter')==='Autre');
+}
+function validateStep(index){
+  updateConditionals();
+  const step=steps[index];
+  if(index===2 && values('Services souhaités').length===0)return'Veuillez sélectionner au moins un service.';
+  if(index===3){
+    const no=document.getElementById('noAdditional');
+    const others=[...step.querySelectorAll('input[name="Services complémentaires"]')].filter(x=>x!==no);
+    if(no?.checked && others.some(x=>x.checked))return'« Aucun service complémentaire » ne peut pas être sélectionné avec d’autres services.';
+  }
+  if(!step.checkValidity()){
+    const bad=step.querySelector(':invalid');
+    if(bad?.name==='Nombre d’invités'){
+      const n=Number(bad.value);
+      if(n<1)return'Le nombre minimum d’invités est de 1.';
+      if(n>900)return'Le nombre maximum d’invités est de 900.';
+    }
+    if(bad?.type==='email')return'Veuillez vérifier cette adresse e-mail.';
+    return'Ce champ est obligatoire. Veuillez compléter cette information.';
+  }
+  return'';
+}
+function message(m){
+  err.textContent=m||'';
+  err.classList.toggle('show',!!m);
+}
+function safe(v){
+  return String(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+}
+const groups=[
+ ['Informations personnelles',['Nom complet','Email','Téléphone','Moyen de contact préféré','Entreprise / Organisation']],
+ ['Type d’événement',['Type d’événement','Précisez le type d’événement','Nom de l’événement','Date prévue de l’événement','Date flexible','Ville / Pays','Lieu choisi','Nom du lieu','Nombre d’invités','Configuration souhaitée']],
+ ['Services',['Services souhaités','Précisez le service souhaité','Services complémentaires','Précisez le service complémentaire']],
+ ['Vision',['Description de l’événement','Thème souhaité','Style recherché','Précisez le style','Couleurs souhaitées','Ambiance recherchée','Demandes particulières']],
+ ['Budget',['Budget estimatif','Budget flexible','Informations budget']],
+ ['Calendrier',['Début de planification','Préparatifs commencés','Fournisseurs choisis','Fournisseurs confirmés','Lieu réservé']],
+ ['Source',['Source Mercury Jupiter','Précisez source']],
+ ['Informations supplémentaires',['Autres informations']]
+];
+function buildSummary(){
+  const out=document.getElementById('formSummary');if(!out)return;
+  let html='';
+  groups.forEach((g,gi)=>{
+    let rows='';
+    g[1].forEach(name=>{
+      const els=[...form.querySelectorAll('[name="'+CSS.escape(name)+'"]')];
+      let vs=[];
+      if(els.some(x=>x.type==='checkbox'||x.type==='radio'))vs=els.filter(x=>x.checked).map(x=>x.value);
+      else vs=els.map(x=>x.value).filter(Boolean);
+      if(name==='Demandes particulières'&&document.getElementById('noSpecial')?.checked)vs=['Aucune demande particulière pour le moment'];
+      if(name==='Autres informations'&&document.getElementById('noMoreInfo')?.checked)vs=['Aucune information supplémentaire pour le moment'];
+      if(vs.length)rows+='<div class="summary-item"><div><strong>'+safe(name)+'</strong>'+vs.map(safe).join(', ')+'</div><button type="button" data-edit="'+gi+'">MODIFIER</button></div>';
+    });
+    if(rows)html+='<h5 style="font-family:Cormorant Garamond,serif;font-size:1.2rem;margin:16px 0 4px">'+safe(g[0])+'</h5>'+rows;
+  });
+  out.innerHTML=html||'<p class="small">Votre récapitulatif apparaîtra ici.</p>';
+  out.querySelectorAll('[data-edit]').forEach(b=>b.addEventListener('click',function(){
+    current=Number(this.dataset.edit);render();form.scrollIntoView({behavior:'smooth',block:'start'});
+  }));
+}
+function render(){
+  updateConditionals();
+  steps.forEach((s,i)=>s.classList.toggle('active',i===current));
+  label.textContent=String(current+1).padStart(2,'0')+' / 10';
+  title.textContent=titles[current];
+  bar.style.width=((current+1)*10)+'%';
+  prev.style.display=current===0?'none':'inline-flex';
+  next.style.display=current===9?'none':'inline-flex';
+  submit.style.display=current===9?'inline-flex':'none';
+  if(current===9)buildSummary();
+  message('');
+}
+function goNext(){
+  const m=validateStep(current);
+  if(m){message(m);return;}
+  if(current<9){current++;render();form.scrollIntoView({behavior:'smooth',block:'start'});}
+}
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.navlinks')?.classList.remove('open')));
+document.getElementById('noSpecial')?.addEventListener('change',e=>{
+  const t=form.querySelector('[name="Demandes particulières"]');
+  t.required=!e.target.checked;
+  if(e.target.checked)t.value='Aucune demande particulière pour le moment';
+  else if(t.value==='Aucune demande particulière pour le moment')t.value='';
+});
+document.getElementById('noMoreInfo')?.addEventListener('change',e=>{
+  const t=form.querySelector('[name="Autres informations"]');
+  t.required=!e.target.checked;
+  if(e.target.checked)t.value='Aucune information supplémentaire pour le moment';
+  else if(t.value==='Aucune information supplémentaire pour le moment')t.value='';
+});
+document.getElementById('noAdditional')?.addEventListener('change',e=>{
+  if(e.target.checked){
+    form.querySelectorAll('#additionalServices input[type="checkbox"]').forEach(x=>{if(x!==e.target)x.checked=false;});
+  }
+});
+document.getElementById('additionalOther')?.addEventListener('change',e=>{
+  if(e.target.checked)document.getElementById('noAdditional').checked=false;
+});
+form.addEventListener('input',()=>{updateConditionals();if(current===9)buildSummary();});
+form.addEventListener('change',()=>{updateConditionals();if(current===9)buildSummary();});
+prev.addEventListener('click',()=>{if(current>0){current--;render();form.scrollIntoView({behavior:'smooth',block:'start');}});
+next.addEventListener('click',goNext);
+form.addEventListener('submit',e=>{
+  updateConditionals();
+  const m=validateStep(9);
+  if(m){e.preventDefault();message(m);return;}
+  if(!form.checkValidity()){e.preventDefault();message('Veuillez vérifier les informations obligatoires avant l’envoi.');return;}
+  submit.textContent='ENVOI EN COURS…';submit.disabled=true;
+});
 render();
+})();
 </script></body></html>
