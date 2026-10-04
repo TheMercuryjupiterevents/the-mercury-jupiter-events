@@ -27,16 +27,16 @@
 :root{--red:#fe0000;--red2:#c90000;--blue:#79bfe0;--gold:#d8b43a;--pink:#e78bb5;--ink:#211c1d;--muted:#665b5d;--line:#211c1d20;--paper:#fff;--max:1180px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--red);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+body{margin:0;background:var(--red);color:var(--ink);font-family:"Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.65;letter-spacing:.005em}
 img{max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 button,input,select,textarea{font:inherit}
 .wrap{width:min(var(--max),92%);margin:0 auto}
-.serif{font-family:Georgia,"Times New Roman",serif}
+.serif{font-family:"Baskerville","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
 .eyebrow{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#a8d5ba}
 h1,h2,h3,p{margin-top:0}
-h2{font:600 clamp(1.7rem,3.8vw,3.05rem)/1.04 Georgia,"Times New Roman",serif;margin-bottom:14px;letter-spacing:-.02em}
-h3{font:600 1.12rem/1.18 Georgia,"Times New Roman",serif;letter-spacing:.01em}
+h2{font:500 clamp(1.7rem,3.8vw,3.05rem)/1.02 "Baskerville","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;margin-bottom:14px;letter-spacing:-.02em}
+h3{font:600 1.12rem/1.18 "Baskerville","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;letter-spacing:.01em}
 .lead{font-size:.95rem;color:#51494a;max-width:700px}
 .section{padding:72px 0}
 .section.alt{background:#faf9f7}
@@ -44,7 +44,7 @@ h3{font:600 1.12rem/1.18 Georgia,"Times New Roman",serif;letter-spacing:.01em}
 .section.dark .lead,.section.dark .small{color:#f8e8e9}
 .nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
 .navin{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;font:700 1.15rem Georgia,"Times New Roman",serif}
+.brand{display:flex;align-items:center;font:700 1.05rem "Baskerville","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;letter-spacing:.02em}
 .brand img{width:44px;height:44px;border-radius:50%;overflow:hidden;object-fit:contain;object-position:center;background:#ffd92f;margin-right:10px;clip-path:circle(49% at 50% 50%)}
 .brand span{color:var(--red)}
 .navlinks{display:flex;gap:18px;align-items:center;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
@@ -54,9 +54,9 @@ h3{font:600 1.12rem/1.18 Georgia,"Times New Roman",serif;letter-spacing:.01em}
 .hero:before{content:"";position:absolute;width:330px;height:330px;border-radius:50%;right:-150px;top:-120px;background:var(--red)}
 .hero:after{content:"";position:absolute;width:240px;height:240px;border:1px solid var(--blue);border-radius:50%;right:130px;bottom:-110px}
 .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;padding:70px 0}
-.hero h1{font:600 clamp(2.35rem,5.8vw,4.85rem)/.88 Georgia,"Times New Roman",serif;letter-spacing:-.035em}
+.hero h1{font:500 clamp(2.35rem,5.8vw,4.85rem)/.88 "Baskerville","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;letter-spacing:-.035em}
 .red{color:var(--red)}.blue{color:var(--blue)}.yellow{color:#c49e13}.pink{color:var(--pink)}
-.tagline{font:600 1.18rem/1.2 Georgia,"Times New Roman",serif;margin:20px 0 10px}
+.tagline{font:500 1.18rem/1.2 "Baskerville","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;letter-spacing:.01em}margin:20px 0 10px}
 .hero-logo{width:min(300px,70%);height:auto;aspect-ratio:1;margin:auto;display:block;border-radius:50%;overflow:hidden;background:#ffd92f;object-fit:contain;clip-path:circle(49.5% at 50% 50%);box-shadow:0 14px 35px #0002}
 .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 19px;border:1px solid var(--red);background:#fff;color:var(--red);font-size:.72rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;cursor:pointer}
@@ -65,7 +65,7 @@ h3{font:600 1.12rem/1.18 Georgia,"Times New Roman",serif;letter-spacing:.01em}
 .grid{display:grid;gap:20px}.grid2{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:repeat(3,1fr)}.grid4{grid-template-columns:repeat(4,1fr)}
 .card{border:1px solid var(--line);padding:25px;background:#fff}
 .card p{color:#615758}.num{font-size:.72rem;letter-spacing:.16em;color:var(--red);font-weight:700}
-.quote{font:600 clamp(2rem,4vw,3.8rem)/1.02 Georgia,"Times New Roman",serif}
+.quote{font:500 clamp(2rem,4vw,3.8rem)/1.02 "Baskerville","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
 .pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}.pill{border:1px solid var(--line);padding:8px 11px;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase}
 .timeline{border-left:1px solid var(--red);padding-left:28px}.timeline .item{position:relative;margin-bottom:28px}.timeline .item:before{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--red);left:-33px;top:7px}
 .package{display:flex;flex-direction:column;min-height:250px}.package .actions{margin-top:auto}
