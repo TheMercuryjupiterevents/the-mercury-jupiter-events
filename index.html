@@ -27,16 +27,16 @@
 :root{--red:#fe0000;--red2:#c90000;--blue:#79bfe0;--gold:#d8b43a;--pink:#e78bb5;--ink:#211c1d;--muted:#665b5d;--line:#211c1d20;--paper:#fff;--max:1180px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--red);color:var(--ink);font-family:"Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.65;letter-spacing:.005em}
+body{margin:0;background:var(--red);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
 img{max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 button,input,select,textarea{font:inherit}
 .wrap{width:min(var(--max),92%);margin:0 auto}
-.serif{font-family:"Baskerville","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+.serif{font-family:Georgia,"Times New Roman",serif}
 .eyebrow{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#a8d5ba}
 h1,h2,h3,p{margin-top:0}
-h2{font:500 clamp(1.7rem,3.8vw,3.05rem)/1.02 "Baskerville","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;margin-bottom:14px;letter-spacing:-.02em}
-h3{font:600 1.12rem/1.18 "Baskerville","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;letter-spacing:.01em}
+h2{font:600 clamp(1.7rem,3.8vw,3.05rem)/1.04 Georgia,"Times New Roman",serif;margin-bottom:14px;letter-spacing:-.02em}
+h3{font:600 1.12rem/1.18 Georgia,"Times New Roman",serif;letter-spacing:.01em}
 .lead{font-size:.95rem;color:#51494a;max-width:700px}
 .section{padding:72px 0}
 .section.alt{background:#faf9f7}
@@ -44,7 +44,7 @@ h3{font:600 1.12rem/1.18 "Baskerville","Iowan Old Style","Palatino Linotype",Pal
 .section.dark .lead,.section.dark .small{color:#f8e8e9}
 .nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
 .navin{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;font:700 1.05rem "Baskerville","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;letter-spacing:.02em}
+.brand{display:flex;align-items:center;font:700 1.15rem Georgia,"Times New Roman",serif}
 .brand img{width:44px;height:44px;border-radius:50%;overflow:hidden;object-fit:contain;object-position:center;background:#ffd92f;margin-right:10px;clip-path:circle(49% at 50% 50%)}
 .brand span{color:var(--red)}
 .navlinks{display:flex;gap:18px;align-items:center;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
@@ -54,9 +54,9 @@ h3{font:600 1.12rem/1.18 "Baskerville","Iowan Old Style","Palatino Linotype",Pal
 .hero:before{content:"";position:absolute;width:330px;height:330px;border-radius:50%;right:-150px;top:-120px;background:var(--red)}
 .hero:after{content:"";position:absolute;width:240px;height:240px;border:1px solid var(--blue);border-radius:50%;right:130px;bottom:-110px}
 .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;padding:70px 0}
-.hero h1{font:500 clamp(2.35rem,5.8vw,4.85rem)/.88 "Baskerville","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;letter-spacing:-.035em}
+.hero h1{font:600 clamp(2.35rem,5.8vw,4.85rem)/.88 Georgia,"Times New Roman",serif;letter-spacing:-.035em}
 .red{color:var(--red)}.blue{color:var(--blue)}.yellow{color:#FFD400}.pink{color:var(--pink)}
-.tagline{font:500 1.18rem/1.2 "Baskerville","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;letter-spacing:.01em;margin:20px 0 10px}
+.tagline{font:600 1.18rem/1.2 Georgia,"Times New Roman",serif;margin:20px 0 10px}
 .hero-logo{width:min(300px,70%);height:auto;aspect-ratio:1;margin:auto;display:block;border-radius:50%;overflow:hidden;background:#ffd92f;object-fit:contain;clip-path:circle(49.5% at 50% 50%);box-shadow:0 14px 35px #0002}
 .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 19px;border:1px solid var(--red);background:#fff;color:var(--red);font-size:.72rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;cursor:pointer}
@@ -65,7 +65,7 @@ h3{font:600 1.12rem/1.18 "Baskerville","Iowan Old Style","Palatino Linotype",Pal
 .grid{display:grid;gap:20px}.grid2{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:repeat(3,1fr)}.grid4{grid-template-columns:repeat(4,1fr)}
 .card{border:1px solid var(--line);padding:25px;background:#fff}
 .card p{color:#615758}.num{font-size:.72rem;letter-spacing:.16em;color:var(--red);font-weight:700}
-.quote{font:500 clamp(2rem,4vw,3.8rem)/1.02 "Baskerville","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+.quote{font:600 clamp(2rem,4vw,3.8rem)/1.02 Georgia,"Times New Roman",serif}
 .pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}.pill{border:1px solid var(--line);padding:8px 11px;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase}
 .timeline{border-left:1px solid var(--red);padding-left:28px}.timeline .item{position:relative;margin-bottom:28px}.timeline .item:before{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--red);left:-33px;top:7px}
 .package{display:flex;flex-direction:column;min-height:250px}.package .actions{margin-top:auto}
@@ -107,6 +107,7 @@ h3{font:600 1.12rem/1.18 "Baskerville","Iowan Old Style","Palatino Linotype",Pal
 <a href="#apropos" onclick="document.getElementById('mobileNav').hidden=true">À propos</a><a href="#services" onclick="document.getElementById('mobileNav').hidden=true">Services</a><a href="#formules" onclick="document.getElementById('mobileNav').hidden=true">Formules</a><a href="#experience" onclick="document.getElementById('mobileNav').hidden=true">Expérience</a><a href="#vision2040" onclick="document.getElementById('mobileNav').hidden=true">Vision 2040</a><a href="#contact" onclick="document.getElementById('mobileNav').hidden=true">Contact</a>
 </div></div>
 </header>
+
 <main id="accueil">
 <section class="hero">
 <div class="wrap hero-grid">
@@ -119,6 +120,170 @@ h3{font:600 1.12rem/1.18 "Baskerville","Iowan Old Style","Palatino Linotype",Pal
 </div>
 <div><img class="hero-logo" src="assets/logo-officiel-exact.png" width="1254" height="1254" decoding="async" fetchpriority="high" alt="Logo officiel rond THE MERCURY JUPITER EVENTS"></div>
 </div></section>
+
+<section id="apropos" class="section">
+<div class="wrap">
+<div class="eyebrow">01 — Notre vision</div>
+<div class="grid grid2" style="margin-top:18px">
+<div><h2>UNE VISION QUI DEVIENT UNE EXPÉRIENCE.</h2></div>
+<div><p class="lead">THE MERCURY JUPITER EVENTS est une nouvelle génération d’agence événementielle créée autour d’une conviction simple : un événement réussi commence bien avant le jour J.</p><p>Il commence par une idée, une vision, une intention. Notre rôle est de transformer cette vision en une expérience structurée, cohérente et mémorable.</p><p>Nous ne sommes pas simplement là pour organiser. Nous sommes là pour comprendre votre vision, la structurer et construire une expérience autour d’elle.</p></div>
+</div>
+</div></section>
+
+<section class="section alt">
+<div class="wrap grid grid2">
+<div><div class="eyebrow">02 — Notre mission</div><h2>CONCEVOIR. ORGANISER. COORDONNER. PRODUIRE.</h2><p class="lead">Nous concevons, organisons, coordonnons et produisons des événements qui donnent vie à la vision de nos clients.</p></div>
+<div class="card"><h3>CRÉATIVITÉ + PLANIFICATION + COORDINATION + PRODUCTION + EXPÉRIENCE</h3><p>Une approche structurée pour construire chaque projet avec clarté, cohérence et attention aux détails.</p></div>
+</div></section>
+
+<section id="services" class="section">
+<div class="wrap">
+<div class="eyebrow">03 — Nos services</div><h2>DES SERVICES PENSÉS POUR DONNER FORME À VOTRE VISION.</h2>
+<div class="grid grid3">
+<div class="card"><div class="num">01</div><h3>PLANIFICATION ÉVÉNEMENTIELLE</h3><p>De la première idée à la dernière étape, nous structurons votre événement avec méthode et créativité.</p></div>
+<div class="card"><div class="num">02</div><h3>COORDINATION ÉVÉNEMENTIELLE</h3><p>Nous coordonnons les équipes, les prestataires et chaque étape avec précision.</p></div>
+<div class="card"><div class="num">03</div><h3>PRODUCTION ÉVÉNEMENTIELLE</h3><p>Nous organisons la mise en œuvre et supervisons les éléments essentiels à votre événement.</p></div>
+<div class="card"><div class="num">04</div><h3>DESIGN & CONCEPT</h3><p>Nous imaginons une direction esthétique cohérente avec votre vision, votre style et votre univers.</p></div>
+<div class="card"><div class="num">05</div><h3>LOGISTIQUE</h3><p>Nous structurons la logistique, les fournisseurs, les installations et le calendrier.</p></div>
+<div class="card"><div class="num">06</div><h3>EXPÉRIENCE</h3><p>Nous pensons chaque détail pour créer une expérience fluide, élégante et personnalisée.</p></div>
+<div class="card"><div class="num">07</div><h3>SERVICE TRAITEUR</h3><p>Nous pouvons intégrer un service traiteur pour préparer et servir les repas, bouchées et autres prestations culinaires adaptés à votre événement.</p></div>
+<div class="card"><div class="num">08</div><h3>TRAITEUR & EXPÉRIENCE CULINAIRE</h3><p>Selon votre projet, nous pouvons organiser une offre culinaire sur mesure : menu, préparation des repas, service et présentation.</p></div>
+</div>
+</div></section>
+
+<section class="section dark">
+<div class="wrap">
+<div class="eyebrow" style="color:#f4c9ce">04 — Types d’événements</div><h2>VOTRE ÉVÉNEMENT. VOTRE UNIVERS.</h2>
+<div class="pills"><span class="pill">Mariages</span><span class="pill">Anniversaires</span><span class="pill">Fiançailles</span><span class="pill">Célébrations privées</span><span class="pill">Événements corporatifs</span><span class="pill">Conférences</span><span class="pill">Galas</span><span class="pill">Lancements de marques</span><span class="pill">Événements VIP</span><span class="pill">Événements sur mesure</span></div>
+<p style="margin-top:28px;font:600 1.7rem Georgia,'Times New Roman',serif">Votre événement ne rentre dans aucune catégorie ? Parlons-en et construisons-le ensemble.</p>
+</div></section>
+
+<section id="formules" class="section alt">
+<div class="wrap">
+<div class="eyebrow">05 — Formules</div><h2>DES FORMULES PENSÉES POUR VOTRE PROJET.</h2>
+<div class="grid grid4">
+<div class="card package"><div><div class="num">ESSENTIAL</div><h3>ESSENTIAL</h3><p>Une base claire et professionnelle pour structurer votre projet avec sérénité.</p></div><div class="actions"><a class="btn" href="#formulaire">Commencer mon projet</a></div></div>
+<div class="card package"><div><div class="num">SIGNATURE</div><h3>SIGNATURE</h3><p>Un accompagnement plus complet, construit autour de votre vision et de vos besoins.</p></div><div class="actions"><a class="btn" href="#formulaire">Demander une consultation</a></div></div>
+<div class="card package"><div><div class="num">PRESTIGE</div><h3>PRESTIGE</h3><p>Une approche renforcée en coordination, design et production.</p></div><div class="actions"><a class="btn" href="#formulaire">Demander une consultation</a></div></div>
+<div class="card package redlabel" id="red-label"><div><div class="eyebrow">Offre premium</div><h3>RED LABEL</h3><p>Une offre premium, hautement personnalisée et confidentielle. En développement.</p></div><div class="actions"><a class="btn btn" style="background:#fff;color:var(--red);border-color:#fff" href="#formulaire">Parler de mon projet</a></div></div>
+</div>
+</div></section>
+
+<section class="section">
+<div class="wrap grid grid2">
+<div><div class="eyebrow">06 — Notre méthode</div><h2>UNE APPROCHE STRUCTURÉE. UNE EXÉCUTION PRÉCISE.</h2></div>
+<div class="timeline">
+<div class="item"><div class="num">01 — DÉCOUVERTE</div><p>Nous écoutons votre vision, vos objectifs et vos besoins.</p></div>
+<div class="item"><div class="num">02 — CONCEPT</div><p>Nous définissons le concept, l’esthétique et l’expérience.</p></div>
+<div class="item"><div class="num">03 — PLANIFICATION</div><p>Nous organisons le calendrier, les ressources et les priorités.</p></div>
+<div class="item"><div class="num">04 — COORDINATION</div><p>Nous coordonnons les équipes, fournisseurs et opérations.</p></div>
+<div class="item"><div class="num">05 — PRODUCTION</div><p>Nous supervisons la mise en œuvre avec méthode et précision.</p></div>
+<div class="item"><div class="num">06 — JOUR DE L’ÉVÉNEMENT</div><p>Nous coordonnons l’exécution pour préserver la fluidité de l’expérience.</p></div>
+<div class="item"><div class="num">07 — CLÔTURE / SUIVI FINAL</div><p>Nous finalisons le projet avec attention et assurons le suivi nécessaire.</p></div>
+</div>
+</div></section>
+
+<section id="experience" class="section alt">
+<div class="wrap grid grid2">
+<div><div class="eyebrow">16 — Expérience client</div><h2>UNE EXPÉRIENCE PENSÉE AUTOUR DE VOUS.</h2></div>
+<div><p class="lead">Chez THE MERCURY JUPITER EVENTS, nous pensons que l’expérience commence bien avant le jour J.</p><p>Dès le premier contact, nous cherchons à créer un accompagnement clair, fluide, personnalisé et professionnel.</p><h3>COMMENCEZ À CONSTRUIRE</h3><p>Chaque événement commence par une vision. Partagez-nous votre idée, votre style et vos attentes afin que nous puissions commencer à construire votre expérience.</p><a class="btn primary" href="#formulaire">Planifier mon événement</a></div>
+</div></section>
+
+<section id="vision2040" class="section">
+<div class="wrap">
+<div class="eyebrow">Vision stratégique</div><h2>CONSTRUIRE UNE MARQUE QUI DURE.</h2>
+<div class="grid grid2">
+<div class="card"><div class="num">2026</div><h3>FONDATION</h3><p>Poser les fondations de la marque et de l’entreprise.</p></div>
+<div class="card"><div class="num">2027</div><h3>CROISSANCE</h3><p>Développer les offres, les processus et les relations clients.</p></div>
+<div class="card"><div class="num">2028</div><h3>PRODUCTION</h3><p>Renforcer progressivement les capacités de production événementielle.</p></div>
+<div class="card"><div class="num">2029</div><h3>EXPANSION</h3><p>Développer progressivement les activités et les marchés.</p></div>
+<div class="card"><div class="num">2030+</div><h3>ENTREPRISE D’EXPÉRIENCES</h3><p>Faire évoluer la marque vers une entreprise centrée sur la création d’expériences.</p></div>
+<div class="card"><div class="num">2040</div><h3>MARQUE ÉVÉNEMENTIELLE / GROUPE</h3><p>Une ambition à long terme, présentée comme une vision et non comme un résultat déjà atteint.</p></div>
+</div>
+</div></section>
+
+<section id="formulaire" class="section alt">
+<div class="wrap form-layout">
+<div><div class="eyebrow">17 — Votre projet</div><h2>COMMENCEZ À CONSTRUIRE VOTRE ÉVÉNEMENT.</h2><p class="lead">Chaque événement commence par une vision. Partagez-nous les informations essentielles concernant votre projet afin que nous puissions comprendre vos besoins, votre style et vos attentes.</p><p class="small">Vous apportez votre vision. Nous construisons l’expérience. Les champs marqués d’un * sont obligatoires.</p><div class="contactbox" style="margin-top:25px"><div class="contactline"><small>WhatsApp</small><a href="https://wa.me/50937469553">+509 37 46 9553</a></div><div class="contactline"><small>Email</small><a href="mailto:carlanne.abbigaelleevents@gmail.com">carlanne.abbigaelleevents@gmail.com</a></div><div class="contactline"><small>Instagram</small><a href="https://www.instagram.com/abbigaellecarlannevenementiels" target="_blank" rel="noopener">abbigaellecarlannevenementiels</a></div></div></div>
+
+<form class="form" action="https://formsubmit.co/carlanne.abbigaelleevents@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="NOUVELLE DEMANDE — THE MERCURY JUPITER ÉVÉNEMENTS">
+<input type="hidden" name="_captcha" value="true">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_autoresponse" value="Bonjour et bienvenue chez THE MERCURY JUPITER EVENTS. Merci de nous avoir contactés. Nous avons bien reçu votre demande et un membre de notre équipe vous répondra dès que possible. Votre vision. Notre créativité. Une expérience inoubliable.">
+<input type="hidden" name="_next" value="https://www.themercuryjupiter.com/">
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+
+<div class="form-section"><h3>01 — Vous</h3><div class="fieldgrid">
+<div class="field"><label for="nom">Nom complet *</label><input id="nom" name="Nom complet" required autocomplete="name"></div>
+<div class="field"><label for="email">Adresse e-mail *</label><input id="email" type="email" name="Email" required autocomplete="email"></div>
+<div class="field"><label for="tel">WhatsApp / Téléphone *</label><input id="tel" type="tel" name="Téléphone" required autocomplete="tel"></div>
+<div class="field"><label for="entreprise">Entreprise / Organisation</label><input id="entreprise" name="Entreprise / Organisation"></div>
+<div class="field full"><span class="group-title">Moyen de contact préféré *</span><div class="checks"><label class="check"><input type="radio" name="Moyen de contact préféré" value="WhatsApp" required>WhatsApp</label><label class="check"><input type="radio" name="Moyen de contact préféré" value="Téléphone">Téléphone</label><label class="check"><input type="radio" name="Moyen de contact préféré" value="E-mail">E-mail</label></div></div>
+</div></div>
+
+<div class="form-section"><h3>02 — Votre événement</h3><div class="fieldgrid">
+<div class="field"><label for="type">Type d’événement *</label><select id="type" name="Type d’événement" required><option value="">Sélectionner</option><option>Mariage</option><option>Fiançailles</option><option>Anniversaire</option><option>Baptême</option><option>Baby Shower</option><option>Bridal Shower</option><option>Gala</option><option>Dîner privé</option><option>Événement corporatif</option><option>Conférence</option><option>Networking</option><option>Lancement de produit</option><option>Festival</option><option>Concert</option><option>Cérémonie</option><option>Événement VIP</option><option>Événement privé</option><option>Autre</option></select></div>
+<div class="field"><label for="eventname">Nom de l’événement *</label><input id="eventname" name="Nom de l’événement" required></div>
+<div class="field"><label for="date">Date prévue *</label><input id="date" type="date" name="Date prévue de l’événement" required></div>
+<div class="field"><label for="city">Localisation *</label><input id="city" name="Localisation" value="Haïti" required placeholder="Ville, Haïti"></div>
+<div class="field"><label for="guests">Nombre d’invités *</label><input id="guests" type="number" name="Nombre d’invités" min="1" max="900" required inputmode="numeric"></div>
+<div class="field"><label for="priority">Priorité de votre projet *</label><select id="priority" name="Priorité du projet" required><option value="">Sélectionner</option><option>Organisation complète</option><option>Coordination</option><option>Design & concept</option><option>Production</option><option>Logistique</option><option>Expérience invités</option><option>À déterminer</option></select></div>
+<div class="field full"><span class="group-title">Date flexible ? *</span><div class="checks"><label class="check"><input type="radio" name="Date flexible" value="Oui" required>Oui</label><label class="check"><input type="radio" name="Date flexible" value="Non">Non</label></div></div>
+<div class="field full"><span class="group-title">Lieu *</span><div class="checks"><label class="check"><input type="radio" name="Lieu choisi" value="Oui" required>Oui, le lieu est choisi</label><label class="check"><input type="radio" name="Lieu choisi" value="Non">Non</label><label class="check"><input type="radio" name="Lieu choisi" value="Aide pour trouver un lieu">J’ai besoin d’aide pour trouver un lieu</label></div></div>
+<div class="field full"><span class="group-title">Configuration *</span><div class="checks"><label class="check"><input type="radio" name="Configuration souhaitée" value="Assis" required>Assis</label><label class="check"><input type="radio" name="Configuration souhaitée" value="Debout">Debout</label><label class="check"><input type="radio" name="Configuration souhaitée" value="Cocktail">Cocktail</label><label class="check"><input type="radio" name="Configuration souhaitée" value="Banquet">Banquet</label><label class="check"><input type="radio" name="Configuration souhaitée" value="Mixte">Mixte</label><label class="check"><input type="radio" name="Configuration souhaitée" value="À déterminer">À déterminer</label></div></div>
+</div></div>
+
+<div class="form-section"><h3>03 — Vos services</h3><p class="small">Sélectionnez au moins un service.</p><div class="checks">
+<label class="check"><input type="checkbox" name="Services souhaités" value="Planification événementielle">Planification événementielle</label><label class="check"><input type="checkbox" name="Services souhaités" value="Coordination événementielle">Coordination événementielle</label><label class="check"><input type="checkbox" name="Services souhaités" value="Production événementielle">Production événementielle</label><label class="check"><input type="checkbox" name="Services souhaités" value="Design & Concept">Design & Concept</label><label class="check"><input type="checkbox" name="Services souhaités" value="Logistique">Logistique</label><label class="check"><input type="checkbox" name="Services souhaités" value="Expérience invités">Expérience invités</label><label class="check"><input type="checkbox" name="Services souhaités" value="Service traiteur">Service traiteur</label><label class="check"><input type="checkbox" name="Services souhaités" value="Préparation des repas pour l’événement">Préparation des repas pour l’événement</label><label class="check"><input type="checkbox" name="Services souhaités" value="Gestion des fournisseurs">Gestion des fournisseurs</label><label class="check"><input type="checkbox" name="Services souhaités" value="Coordination Jour J">Coordination Jour J</label><label class="check"><input type="checkbox" name="Services souhaités" value="Décoration">Décoration</label><label class="check"><input type="checkbox" name="Services souhaités" value="Audiovisuel / Son / Lumière">Audiovisuel / Son / Lumière</label><label class="check"><input type="checkbox" name="Services souhaités" value="Invitations & RSVP">Invitations & RSVP</label><label class="check"><input type="checkbox" name="Services souhaités" value="Autre">Autre</label>
+</div></div>
+
+<div class="form-section"><h3>04 — Services complémentaires</h3><div class="checks">
+<label class="check"><input type="checkbox" name="Services complémentaires" value="Photographie">Photographie</label><label class="check"><input type="checkbox" name="Services complémentaires" value="Vidéographie">Vidéographie</label><label class="check"><input type="checkbox" name="Services complémentaires" value="DJ / Musique">DJ / Musique</label><label class="check"><input type="checkbox" name="Services complémentaires" value="Animation">Animation</label><label class="check"><input type="checkbox" name="Services complémentaires" value="Traiteur">Traiteur</label><label class="check"><input type="checkbox" name="Services complémentaires" value="Préparation & service des repas">Préparation & service des repas</label><label class="check"><input type="checkbox" name="Services complémentaires" value="Bouchées & service culinaire">Bouchées & service culinaire</label><label class="check"><input type="checkbox" name="Services complémentaires" value="Gâteau">Gâteau</label><label class="check"><input type="checkbox" name="Services complémentaires" value="Fleurs">Fleurs</label><label class="check"><input type="checkbox" name="Services complémentaires" value="Mobilier">Mobilier</label><label class="check"><input type="checkbox" name="Services complémentaires" value="Éclairage">Éclairage</label><label class="check"><input type="checkbox" name="Services complémentaires" value="Scénographie">Scénographie</label><label class="check"><input type="checkbox" name="Services complémentaires" value="Sécurité">Sécurité</label><label class="check"><input type="checkbox" name="Services complémentaires" value="Transport">Transport</label><label class="check"><input type="checkbox" name="Services complémentaires" value="Hôtellerie">Hôtellerie</label><label class="check"><input type="checkbox" name="Services complémentaires" value="Personnel événementiel">Personnel événementiel</label>
+</div></div>
+
+<div class="form-section"><h3>05 — Votre vision</h3><div class="fieldgrid">
+<div class="field full"><label for="description">Parlez-nous de votre événement *</label><textarea id="description" name="Description de l’événement" required></textarea></div>
+<div class="field"><label for="theme">Thème souhaité *</label><input id="theme" name="Thème souhaité" required></div>
+<div class="field"><label for="colors">Couleurs souhaitées *</label><input id="colors" name="Couleurs souhaitées" required></div>
+<div class="field"><label for="style">Style recherché *</label><select id="style" name="Style recherché" required><option value="">Sélectionner</option><option>Élégant</option><option>Luxe</option><option>Minimaliste</option><option>Moderne</option><option>Classique</option><option>Glamour</option><option>Corporate</option><option>Intime</option><option>Festif</option><option>Créatif</option><option>Autre</option></select></div>
+<div class="field"><label for="ambiance">Ambiance recherchée *</label><input id="ambiance" name="Ambiance recherchée" required></div>
+<div class="field full"><label for="special">Demandes particulières</label><textarea id="special" name="Demandes particulières"></textarea></div>
+</div></div>
+
+<div class="form-section"><h3>06 — Calendrier & préparation</h3><div class="fieldgrid">
+<div class="field"><label for="start">Quand souhaitez-vous commencer ? *</label><select id="start" name="Début de planification" required><option value="">Sélectionner</option><option>Dès maintenant</option><option>Dans 1 mois</option><option>Dans 2–3 mois</option><option>Dans 4–6 mois</option><option>Plus de 6 mois</option><option>Je ne sais pas encore</option></select></div>
+<div class="field"><label for="reserved">Lieu réservé ? *</label><select id="reserved" name="Lieu réservé" required><option value="">Sélectionner</option><option>Oui</option><option>Non</option><option>En discussion</option></select></div>
+<div class="field"><span class="group-title">Préparatifs commencés ? *</span><div class="checks"><label class="check"><input type="radio" name="Préparatifs commencés" value="Oui" required>Oui</label><label class="check"><input type="radio" name="Préparatifs commencés" value="Non">Non</label></div></div>
+<div class="field"><span class="group-title">Fournisseurs choisis ? *</span><div class="checks"><label class="check"><input type="radio" name="Fournisseurs choisis" value="Oui" required>Oui</label><label class="check"><input type="radio" name="Fournisseurs choisis" value="Non">Non</label></div></div>
+<div class="field full"><label for="vendors">Fournisseurs déjà confirmés</label><input id="vendors" name="Fournisseurs confirmés"></div>
+</div></div>
+
+<div class="form-section"><h3>07 — Comment nous avez-vous connus ?</h3><div class="checks">
+<label class="check"><input type="radio" name="Source Mercury Jupiter" value="Instagram" required>Instagram</label><label class="check"><input type="radio" name="Source Mercury Jupiter" value="TikTok">TikTok</label><label class="check"><input type="radio" name="Source Mercury Jupiter" value="WhatsApp">WhatsApp</label><label class="check"><input type="radio" name="Source Mercury Jupiter" value="Facebook">Facebook</label><label class="check"><input type="radio" name="Source Mercury Jupiter" value="Google">Google</label><label class="check"><input type="radio" name="Source Mercury Jupiter" value="Recommandation">Recommandation</label><label class="check"><input type="radio" name="Source Mercury Jupiter" value="Ami / Famille">Ami / Famille</label><label class="check"><input type="radio" name="Source Mercury Jupiter" value="Partenaire">Partenaire</label><label class="check"><input type="radio" name="Source Mercury Jupiter" value="Événement">Événement</label><label class="check"><input type="radio" name="Source Mercury Jupiter" value="Autre">Autre</label>
+</div></div>
+
+<div class="form-section"><h3>08 — Un dernier mot</h3><div class="field"><label for="more">Y a-t-il un détail important que vous souhaitez nous partager ?</label><textarea id="more" name="Autres informations"></textarea></div></div>
+
+<div class="form-section"><label class="consent"><input type="checkbox" name="Confirmation finale" value="Confirmé" required><span>Je confirme que les informations fournies sont exactes et complètes. *</span></label><button class="btn primary" type="submit">Envoyer ma demande</button></div>
+</form>
+</div></section>
+
+<section id="contact" class="section">
+<div class="wrap grid grid2">
+<div><div class="eyebrow">18 — Contact</div><h2>PARLONS DE VOTRE PROJET.</h2><p class="lead">Vous apportez votre vision. Nous construisons l’expérience.</p></div>
+<div class="contactbox"><div class="contactline"><small>WhatsApp</small><a href="https://wa.me/50937469553">+509 37 46 9553</a></div><div class="contactline"><small>Téléphone</small><a href="tel:+50937469553">+509 37 46 9553</a></div><div class="contactline"><small>Email</small><a href="mailto:carlanne.abbigaelleevents@gmail.com">carlanne.abbigaelleevents@gmail.com</a></div><div class="contactline"><small>Instagram</small><a href="https://www.instagram.com/abbigaellecarlannevenementiels" target="_blank" rel="noopener">abbigaellecarlannevenementiels</a></div><div class="contactline"><small>Localisation</small><span>Haïti</span></div></div>
+</div></section>
 </main>
+
+<footer class="footer">
+<div class="wrap footergrid">
+<div><img src="assets/logo-officiel-exact.png" alt="Logo officiel" style="width:92px;height:92px;border-radius:50%;overflow:hidden;object-fit:contain;clip-path:circle(49% at 50% 50%);margin-bottom:16px"><div class="eyebrow" style="color:#79bfe0">THE MERCURY JUPITER EVENTS</div><h3>Événements & Événementiels</h3><p>Votre vision. Notre créativité. Une expérience inoubliable.</p></div>
+<div><div class="eyebrow" style="color:#79bfe0">Navigation</div><p style="margin-top:14px"><a href="#apropos">À propos</a><br><a href="#services">Services</a><br><a href="#formules">Formules</a><br><a href="#experience">Expérience</a><br><a href="#vision2040">Vision 2040</a><br><a href="#contact">Contact</a><br><a href="legal.html">Informations légales & confidentialité</a></p></div>
+<div><div class="eyebrow" style="color:#79bfe0">Présence numérique</div><p style="margin-top:14px"><a href="https://www.instagram.com/abbigaellecarlannevenementiels" target="_blank" rel="noopener">Instagram</a><br><a href="https://wa.me/50937469553">WhatsApp</a><br><a href="mailto:carlanne.abbigaelleevents@gmail.com">Email</a></p></div>
+</div>
+<div class="wrap footerbottom"><span>© 2026 THE MERCURY JUPITER ÉVÉNEMENTS</span><span>CONCEVOIR DES EXPÉRIENCES. CRÉER DES MOMENTS. CONSTRUIRE L’AVENIR.</span></div>
+</footer>
+<a class="wa" href="https://wa.me/50937469553?text=Bonjour%20THE%20MERCURY%20JUPITER%20EVENTS%2C%20je%20souhaite%20parler%20de%20mon%20projet." aria-label="Contacter THE MERCURY JUPITER EVENTS sur WhatsApp">WhatsApp</a>
 </body>
 </html>
