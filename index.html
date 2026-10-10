@@ -179,6 +179,17 @@ body{background:#fff;color:#171717}
 @keyframes welcome-fade{to{opacity:1}}
 @media(max-width:520px){#welcome-intro{gap:22px;padding:24px 18px}#welcome-intro:before{inset:10px}#welcome-intro:after{inset:15px}#welcome-intro .welcome-word{font-size:clamp(1.65rem,8.2vw,2.8rem);letter-spacing:.055em;gap:.025em}#welcome-intro .welcome-brand{font-size:clamp(.78rem,3.8vw,1rem);line-height:2;letter-spacing:.055em;max-width:310px}#welcome-intro .welcome-tagline{max-width:270px;font-size:.78rem}}
 @media(prefers-reduced-motion:reduce){#welcome-intro .welcome-word span,#welcome-intro .welcome-brand span,#welcome-intro .welcome-rule,#welcome-intro .welcome-tagline{animation:none;opacity:1;transform:none}#welcome-intro{transition:none}}
+
+.inspiration-upload{margin-top:18px;padding:18px;border:1px dashed #c5a45a;background:#fcfaf5}
+.inspiration-upload p{margin-bottom:12px}
+.inspiration-files{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.inspiration-files .field input[type=file]{min-height:auto;padding:10px;font-size:.78rem}
+.inspiration-previews{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}
+.inspiration-preview{display:none;min-width:0}
+.inspiration-preview img{display:block;width:100%;height:130px;object-fit:cover;border:1px solid #c5a45a55}
+.inspiration-preview span{display:block;font-size:.7rem;overflow-wrap:anywhere;margin-top:5px;color:#665b5d}
+@media(max-width:680px){.inspiration-files,.inspiration-previews{grid-template-columns:1fr}.inspiration-preview img{height:190px}}
+
 </style>
 </head>
 <body>
@@ -356,7 +367,7 @@ body{background:#fff;color:#171717}
 <div class="wrap form-layout">
 <div><div class="eyebrow">17 — Votre projet</div><h2>COMMENCEZ À CONSTRUIRE VOTRE ÉVÉNEMENT.</h2><p class="lead">Chaque événement commence par une vision. Partagez-nous les informations essentielles concernant votre projet afin que nous puissions comprendre vos besoins, votre style et vos attentes.</p><p class="small">Vous apportez votre vision. Nous construisons l’expérience. Les champs marqués d’un * sont obligatoires.</p><div class="contactbox" style="margin-top:25px"><div class="contactline"><small>WhatsApp</small><a href="https://wa.me/50937469553?text=Bonjour%2C%20je%20souhaiterais%20obtenir%20davantage%20d%E2%80%99informations%20concernant%20les%20services%20de%20THE%20MERCURY%20JUPITER%20EVENTS%20et%20%C3%A9changer%20avec%20votre%20%C3%A9quipe%20au%20sujet%20de%20mon%20projet%20%C3%A9v%C3%A9nementiel.%20Merci%20d%E2%80%99avance%20pour%20votre%20retour.">+509 37 46 9553</a></div><div class="contactline"><small>Email</small><a href="mailto:carlanne.abbigaelleevents@gmail.com">carlanne.abbigaelleevents@gmail.com</a></div><div class="contactline"><small>Instagram</small><a href="https://www.instagram.com/abbigaellecarlannevenementiels" target="_blank" rel="noopener">abbigaellecarlannevenementiels</a></div></div></div>
 
-<form class="form" action="https://formsubmit.co/carlanne.abbigaelleevents@gmail.com" method="POST">
+<form class="form" action="https://formsubmit.co/carlanne.abbigaelleevents@gmail.com" method="POST" enctype="multipart/form-data">
 <input type="hidden" name="_subject" value="NOUVELLE DEMANDE D’ÉVÉNEMENT — THE MERCURY JUPITER EVENTS">
 <input type="hidden" name="_captcha" value="true">
 <input type="hidden" name="_template" value="box">
@@ -415,6 +426,23 @@ body{background:#fff;color:#171717}
 <div class="field"><label for="style">Style recherché *</label><select id="style" name="Style recherché" required><option value="">Sélectionner</option><option>Élégant</option><option>Luxe</option><option>Minimaliste</option><option>Moderne</option><option>Classique</option><option>Glamour</option><option>Corporate</option><option>Intime</option><option>Festif</option><option>Créatif</option><option>Autre</option></select></div>
 <div class="field"><label for="ambiance">Ambiance recherchée *</label><input id="ambiance" name="Ambiance recherchée" required></div>
 <div class="field full"><label for="special">Demandes particulières</label><textarea id="special" name="Demandes particulières"></textarea></div>
+</div></div>
+
+
+<div class="form-section"><h3>05 bis — Photos d’inspiration</h3>
+<p class="small">Vous avez vu une décoration, un gâteau, une mise en scène ou un événement qui vous plaît ? Ajoutez jusqu’à 3 photos pour nous montrer le style que vous souhaitez. Les images seront jointes à votre demande par e-mail. Taille totale maximale : 10 Mo.</p>
+<div class="inspiration-upload">
+<div class="inspiration-files">
+<div class="field"><label for="inspiration1">Photo d’inspiration 1</label><input id="inspiration1" type="file" name="Photo d’inspiration 1" accept="image/jpeg,image/png,image/webp"></div>
+<div class="field"><label for="inspiration2">Photo d’inspiration 2</label><input id="inspiration2" type="file" name="Photo d’inspiration 2" accept="image/jpeg,image/png,image/webp"></div>
+<div class="field"><label for="inspiration3">Photo d’inspiration 3</label><input id="inspiration3" type="file" name="Photo d’inspiration 3" accept="image/jpeg,image/png,image/webp"></div>
+</div>
+<div id="inspirationPreviews" class="inspiration-previews" aria-live="polite">
+<div class="inspiration-preview" id="previewWrap1"><img id="preview1" alt="Aperçu de la photo d’inspiration 1"><span id="previewName1"></span></div>
+<div class="inspiration-preview" id="previewWrap2"><img id="preview2" alt="Aperçu de la photo d’inspiration 2"><span id="previewName2"></span></div>
+<div class="inspiration-preview" id="previewWrap3"><img id="preview3" alt="Aperçu de la photo d’inspiration 3"><span id="previewName3"></span></div>
+</div>
+<p id="inspirationError" class="small" role="alert" style="display:none;color:#c8102e;margin:12px 0 0"></p>
 </div></div>
 
 <div class="form-section"><h3>06 — Calendrier & préparation</h3><div class="fieldgrid">
@@ -493,6 +521,33 @@ body{background:#fff;color:#171717}
 <a class="wa" href="https://wa.me/50937469553?text=Bonjour%2C%20je%20souhaiterais%20obtenir%20davantage%20d%E2%80%99informations%20concernant%20les%20services%20de%20THE%20MERCURY%20JUPITER%20EVENTS%20et%20%C3%A9changer%20avec%20votre%20%C3%A9quipe%20au%20sujet%20de%20mon%20projet%20%C3%A9v%C3%A9nementiel.%20Merci%20d%E2%80%99avance%20pour%20votre%20retour." aria-label="Contacter THE MERCURY JUPITER EVENTS sur WhatsApp">WhatsApp</a>
 
 <script>
+
+(function(){
+  var form=document.querySelector('form.form');
+  if(!form)return;
+  var ids=['inspiration1','inspiration2','inspiration3'];
+  var error=document.getElementById('inspirationError');
+  function updatePreview(index){
+    var input=document.getElementById(ids[index]);
+    var wrap=document.getElementById('previewWrap'+(index+1));
+    var img=document.getElementById('preview'+(index+1));
+    var name=document.getElementById('previewName'+(index+1));
+    var file=input.files&&input.files[0];
+    if(!file){wrap.style.display='none';img.removeAttribute('src');name.textContent='';return;}
+    if(!['image/jpeg','image/png','image/webp'].includes(file.type)){
+      input.value='';wrap.style.display='none';error.textContent='Choisissez uniquement des images JPG, PNG ou WEBP.';error.style.display='block';return;
+    }
+    wrap.style.display='block';img.src=URL.createObjectURL(file);name.textContent=file.name;
+    error.style.display='none';
+  }
+  ids.forEach(function(id,index){document.getElementById(id).addEventListener('change',function(){updatePreview(index);});});
+  form.addEventListener('submit',function(event){
+    var files=ids.map(function(id){return document.getElementById(id).files[0];}).filter(Boolean);
+    var total=files.reduce(function(sum,file){return sum+file.size;},0);
+    if(total>10*1024*1024){event.preventDefault();error.textContent='Les photos dépassent 10 Mo au total. Choisissez des images plus légères avant d’envoyer votre demande.';error.style.display='block';document.getElementById('inspirationPreviews').scrollIntoView({behavior:'smooth',block:'center'});}
+  });
+})();
+
 (function(){
   var intro=document.getElementById('welcome-intro');
   if(!intro)return;
