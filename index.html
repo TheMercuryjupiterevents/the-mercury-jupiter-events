@@ -163,11 +163,15 @@ body{background:#fff;color:#171717}
 /* Intro BIENVENUE — ouverture élégante */
 #welcome-intro{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#ffffff;color:#000000;opacity:1;visibility:visible;transition:opacity .75s ease,visibility .75s ease}
 #welcome-intro.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
+#welcome-intro{flex-direction:column;gap:24px;padding:24px}
 #welcome-intro .welcome-word{display:flex;gap:.035em;padding:0 14px;font:500 clamp(2rem,8vw,5.6rem)/1 Georgia,"Times New Roman",serif;letter-spacing:.12em;text-align:center}
 #welcome-intro .welcome-word span{display:inline-block;color:#000000;opacity:0;transform:translateY(12px);animation:welcome-letter .32s ease forwards;animation-delay:calc(var(--i)*.16s)}
-#welcome-intro .welcome-word span:nth-child(3n+1){color:#ff0000}
-#welcome-intro .welcome-word span:nth-child(3n+2){color:#ffffff;text-shadow:0 0 1px #000000, 0 0 2px #000000}
-#welcome-intro .welcome-word span:nth-child(3n){color:#000000}
+#welcome-intro .welcome-word span:nth-child(odd){color:#d71920}
+#welcome-intro .welcome-word span:nth-child(even){color:#171717}
+#welcome-intro .welcome-brand{max-width:900px;text-align:center;font:600 clamp(1rem,3.5vw,2rem)/1.45 Georgia,"Times New Roman",serif;letter-spacing:.08em;text-transform:uppercase;color:#171717}
+#welcome-intro .welcome-brand .white-word{color:#fff;-webkit-text-stroke:1px #171717;text-shadow:0 0 1px #171717}
+#welcome-intro .welcome-brand span{display:inline-block;opacity:0;transform:translateY(12px);animation:welcome-letter .32s ease forwards;animation-delay:calc(var(--i)*.035s + 1.5s)}
+@media(max-width:520px){#welcome-intro{gap:18px}#welcome-intro .welcome-word{font-size:clamp(1.65rem,8vw,3rem);letter-spacing:.07em}#welcome-intro .welcome-brand{font-size:clamp(.85rem,4vw,1.2rem);letter-spacing:.045em}}
 @keyframes welcome-letter{to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){#welcome-intro .welcome-word span{animation:none;opacity:1;transform:none}#welcome-intro{transition:none}}
 
@@ -178,6 +182,9 @@ body{background:#fff;color:#171717}
 <div id="welcome-intro" role="status" aria-label="Bienvenue">
   <div class="welcome-word" aria-label="BIENVENUE">
     <span style="--i:0">B</span><span style="--i:1">I</span><span style="--i:2">E</span><span style="--i:3">N</span><span style="--i:4">V</span><span style="--i:5">E</span><span style="--i:6">N</span><span style="--i:7">U</span><span style="--i:8">E</span>
+  </div>
+  <div class="welcome-brand" aria-label="Chez THE MERCURY JUPITER EVENTS et Événementiels">
+    <span style="--i:0">Chez&nbsp;</span><span class="white-word" style="--i:1">THE&nbsp;</span><span style="--i:2">MERCURY&nbsp;</span><span class="white-word" style="--i:3">JUPITER&nbsp;</span><span style="--i:4">EVENTS&nbsp;</span><span class="white-word" style="--i:5">&amp;&nbsp;</span><span style="--i:6">ÉVÉNEMENTIELS</span>
   </div>
 </div>
 
