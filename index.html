@@ -190,6 +190,37 @@ body{background:#fff;color:#171717}
 .inspiration-preview span{display:block;font-size:.7rem;overflow-wrap:anywhere;margin-top:5px;color:#665b5d}
 @media(max-width:680px){.inspiration-files,.inspiration-previews{grid-template-columns:1fr}.inspiration-preview img{height:190px}}
 
+
+/* Nouvelles sections — galerie bleu ciel aesthetic et outils clients */
+.sky-gallery{background:linear-gradient(145deg,#eaf8ff 0%,#d7f0fc 48%,#f7fcff 100%);color:#1b2b35}
+.sky-gallery .lead{color:#405c6a}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:28px}
+.gallery-slot{min-height:225px;border:1px solid #8ecde7;background:linear-gradient(150deg,rgba(255,255,255,.94),rgba(199,233,248,.86));border-radius:16px;padding:22px 16px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;box-shadow:0 12px 30px #6aaecb18}
+.gallery-slot h3{font-size:.78rem;color:#2c647e;margin:12px 0 8px}
+.gallery-slot p{font-size:.78rem;color:#52798b;margin-bottom:0}
+.gallery-icon{font-size:2.1rem;color:#76bad8}
+.gallery-upload{margin-top:22px;border-color:#a9d8eb;border-radius:16px;display:grid;gap:15px}
+.gallery-upload .field input{border-color:#acd9e9}
+.gallery-local-preview{display:flex;align-items:center;gap:16px;padding:14px;background:#edf9ff;border:1px solid #acd9e9;border-radius:12px}
+.gallery-local-preview img{width:116px;height:100px;object-fit:cover;border-radius:8px}
+.gallery-local-preview p{margin:6px 0 0}
+.creator-layout,.budget-layout{align-items:stretch}
+.creator-card{display:grid;gap:16px;border-radius:14px}
+.creator-card .field{margin:0}
+.creator-preview{border-radius:14px;min-height:100%;padding:24px;background:linear-gradient(145deg,#eaf8ff,#c9eafa 52%,#fdfefe);display:flex;align-items:center;justify-content:center;text-align:center}
+.creator-preview-inner{width:100%;padding:28px 18px;border:1px solid #ffffffcc;background:#ffffff88;border-radius:12px}
+.creator-preview h3{font-size:1.2rem;color:#245d77;margin:8px 0}
+.creator-preview .eyebrow{color:#4688a4}
+.creator-sparkle{font-size:3rem;color:#78bad7}
+.creator-swatches{display:flex;justify-content:center;gap:10px;margin:22px 0}
+.creator-swatches span{width:42px;height:42px;border-radius:50%;border:2px solid white;box-shadow:0 2px 8px #0001;background:#9fd8f0}
+.creator-swatches span:nth-child(2){background:#fff}
+.creator-swatches span:nth-child(3){background:#c5a45a}
+.budget-result{margin-top:18px;padding:16px;border-radius:10px;background:#edf8fc;border:1px solid #c1e3f1;color:#244c5d;font-size:.9rem;line-height:1.7}
+.budget-result ul{padding-left:20px;margin-bottom:0}
+@media(max-width:950px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.gallery-grid{grid-template-columns:1fr 1fr;gap:10px}.gallery-slot{min-height:170px;padding:14px 9px}.gallery-slot h3{font-size:.68rem}.gallery-slot p{font-size:.7rem}.gallery-local-preview{align-items:flex-start;flex-direction:column}.gallery-local-preview img{width:100%;height:170px}.creator-preview{min-height:280px}}
+
 </style>
 </head>
 <body>
@@ -209,13 +240,13 @@ body{background:#fff;color:#171717}
 <div class="wrap navin">
 <a class="brand" href="#accueil" aria-label="THE MERCURY JUPITER EVENTS"><img src="assets/logo-rond-officiel.jpg" alt="Logo officiel THE MERCURY JUPITER EVENTS"><span class="brand-name">THE MERCURY JUPITER EVENTS<small>ÉVÉNEMENTIEL</small></span></a>
 <nav class="navlinks" aria-label="Navigation principale">
-<a href="#apropos">À propos</a><a href="#equipe">L’équipe</a><a href="#services">Services</a><a href="#formules">Formules</a><a href="#experience">Expérience</a><a href="#vision2040">Vision 2040</a><a href="#partenariats">Partenariats</a><a href="presentation.html">Dossier de présentation</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+<a href="#apropos">À propos</a><a href="#equipe">L’équipe</a><a href="#services">Services</a><a href="#galerie">Galerie photos</a><a href="#createur">Créer mon événement</a><a href="#budget-estimateur">Budget</a><a href="#formules">Formules</a><a href="#experience">Expérience</a><a href="#vision2040">Vision 2040</a><a href="#partenariats">Partenariats</a><a href="presentation.html">Dossier de présentation</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
 </nav>
 <button class="menu" type="button" onclick="document.getElementById('mobileNav').hidden=!document.getElementById('mobileNav').hidden" aria-label="Ouvrir le menu">☰</button>
 </div>
 <div id="mobileNav" hidden style="border-top:1px solid #211c1d20;background:#fff">
 <div class="wrap" style="padding:12px 0 18px;display:grid;gap:12px;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em">
-<a href="#apropos" onclick="document.getElementById('mobileNav').hidden=true">À propos</a><a href="#equipe" onclick="document.getElementById('mobileNav').hidden=true">L’équipe</a><a href="#services" onclick="document.getElementById('mobileNav').hidden=true">Services</a><a href="#formules" onclick="document.getElementById('mobileNav').hidden=true">Formules</a><a href="#experience" onclick="document.getElementById('mobileNav').hidden=true">Expérience</a><a href="#vision2040" onclick="document.getElementById('mobileNav').hidden=true">Vision 2040</a><a href="#partenariats" onclick="document.getElementById('mobileNav').hidden=true">Partenariats</a><a href="#contact" onclick="document.getElementById('mobileNav').hidden=true">Contact</a>
+<a href="#apropos" onclick="document.getElementById('mobileNav').hidden=true">À propos</a><a href="#equipe" onclick="document.getElementById('mobileNav').hidden=true">L’équipe</a><a href="#services" onclick="document.getElementById('mobileNav').hidden=true">Services</a><a href="#galerie" onclick="document.getElementById('mobileNav').hidden=true">Galerie photos</a><a href="#createur" onclick="document.getElementById('mobileNav').hidden=true">Créer mon événement</a><a href="#budget-estimateur" onclick="document.getElementById('mobileNav').hidden=true">Budget</a><a href="#formules" onclick="document.getElementById('mobileNav').hidden=true">Formules</a><a href="#experience" onclick="document.getElementById('mobileNav').hidden=true">Expérience</a><a href="#vision2040" onclick="document.getElementById('mobileNav').hidden=true">Vision 2040</a><a href="#partenariats" onclick="document.getElementById('mobileNav').hidden=true">Partenariats</a><a href="#contact" onclick="document.getElementById('mobileNav').hidden=true">Contact</a>
 </div></div>
 </header>
 
@@ -504,6 +535,73 @@ body{background:#fff;color:#171717}
 </section>
 
 
+
+<section id="galerie" class="section sky-gallery">
+<div class="wrap">
+<div class="eyebrow">Galerie évolutive</div>
+<h2>NOS INSPIRATIONS & FUTURES RÉALISATIONS.</h2>
+<p class="lead">Un espace conçu pour accueillir les photos de nos événements au fil de leur réalisation. Aucune photo d’événement n’est affichée ici pour le moment : nous ajouterons nos propres images au fur et à mesure.</p>
+<div class="gallery-grid" id="publicGallery">
+<article class="gallery-slot"><div class="gallery-icon" aria-hidden="true">✧</div><h3>MARIAGES & CÉRÉMONIES</h3><p>Emplacement réservé à vos futures photos</p></article>
+<article class="gallery-slot"><div class="gallery-icon" aria-hidden="true">✧</div><h3>ANNIVERSAIRES & FÊTES</h3><p>Emplacement réservé à vos futures photos</p></article>
+<article class="gallery-slot"><div class="gallery-icon" aria-hidden="true">✧</div><h3>DÉCORATION & ART DE LA TABLE</h3><p>Emplacement réservé à vos futures photos</p></article>
+<article class="gallery-slot"><div class="gallery-icon" aria-hidden="true">✧</div><h3>ÉVÉNEMENTS PROFESSIONNELS</h3><p>Emplacement réservé à vos futures photos</p></article>
+</div>
+<div class="gallery-upload card">
+<div><div class="eyebrow">Préparer une photo</div><h3>AJOUTER UNE PHOTO À LA GALERIE</h3><p class="small">Choisissez une image pour prévisualiser son emplacement. Cet aperçu reste sur votre appareil : pour la publier durablement sur le site, le fichier doit ensuite être ajouté au dépôt du site.</p></div>
+<div class="field"><label for="galleryPhotoInput">Choisir une photo (JPG, PNG ou WEBP)</label><input id="galleryPhotoInput" type="file" accept="image/jpeg,image/png,image/webp"></div>
+<div class="field"><label for="galleryPhotoTitle">Titre de la photo</label><input id="galleryPhotoTitle" type="text" maxlength="80" placeholder="Ex. Décoration de mariage en bleu ciel"></div>
+<button class="btn primary" type="button" id="galleryPreviewButton">Prévisualiser la photo</button>
+<p id="galleryPhotoNotice" class="small" aria-live="polite"></p>
+<div id="galleryLocalPreview" class="gallery-local-preview" hidden><img id="galleryPreviewImage" alt="Aperçu de la photo choisie"><div><strong id="galleryPreviewTitle"></strong><p class="small">Aperçu local uniquement — cette photo n’est pas encore publiée sur le site.</p></div></div>
+</div>
+</div>
+</section>
+
+<section id="createur" class="section alt">
+<div class="wrap">
+<div class="eyebrow">Votre projet, votre univers</div>
+<h2>IMAGINEZ UN ÉVÉNEMENT À VOTRE IMAGE.</h2>
+<p class="lead">Choisissez vos préférences pour nous aider à comprendre votre vision. Votre sélection pourra être envoyée à notre équipe sur WhatsApp.</p>
+<div class="grid grid2 creator-layout">
+<div class="card creator-card">
+<div class="field"><label for="creatorType">Type d’événement</label><select id="creatorType"><option>Mariage</option><option>Fiançailles</option><option>Anniversaire</option><option>Baptême</option><option>Baby shower</option><option>Gala</option><option>Dîner privé</option><option>Événement corporatif</option><option>Conférence</option><option>Lancement de produit</option><option>Concert ou festival</option><option>Autre événement</option></select></div>
+<div class="field"><label for="creatorStyle">Style recherché</label><select id="creatorStyle"><option>Élégant et intemporel</option><option>Old Money / luxe discret</option><option>Romantique et floral</option><option>Moderne et minimaliste</option><option>Coloré et festif</option><option>VIP / prestige</option></select></div>
+<div class="field"><label for="creatorPalette">Palette de couleurs</label><select id="creatorPalette"><option>Bleu ciel, blanc et doré</option><option>Rouge, noir et doré</option><option>Blanc, ivoire et champagne</option><option>Rose poudré et blanc</option><option>Vert sauge et crème</option><option>Couleurs personnalisées</option></select></div>
+<div class="field"><label for="creatorGuests">Nombre approximatif d’invités</label><input id="creatorGuests" type="number" min="1" max="10000" placeholder="Ex. 100"></div>
+<div class="field"><label for="creatorNotes">Vos idées ou détails</label><textarea id="creatorNotes" placeholder="Décrivez votre vision, le lieu souhaité ou les éléments importants…"></textarea></div>
+<button type="button" class="btn primary" id="sendCreatorWhatsApp">Envoyer mon idée sur WhatsApp</button>
+</div>
+<div class="creator-preview">
+<div class="creator-preview-inner"><div class="eyebrow">Votre concept</div><div class="creator-sparkle">✧</div><h3 id="creatorPreviewType">MARIAGE</h3><p id="creatorPreviewStyle">Élégant et intemporel</p><div class="creator-swatches" id="creatorSwatches"><span></span><span></span><span></span></div><p id="creatorPreviewGuests" class="small">Votre nombre d’invités apparaîtra ici</p><p class="small">Concept indicatif, à affiner avec notre équipe.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="budget-estimateur" class="section">
+<div class="wrap">
+<div class="eyebrow">Préparer votre enveloppe</div>
+<h2>VOTRE BUDGET, EN TOUTE CLARTÉ.</h2>
+<p class="lead">Cet outil vous aide à organiser votre budget indicatif. Il ne constitue pas un devis et ne calcule pas les prix réels de nos prestations.</p>
+<div class="grid grid2 budget-layout">
+<div class="card">
+<div class="field"><label for="budgetTotal">Budget total envisagé (HTG)</label><input id="budgetTotal" type="number" min="0" step="500" placeholder="Ex. 150000"></div>
+<div class="field"><label for="budgetGuests">Nombre d’invités</label><input id="budgetGuests" type="number" min="1" max="10000" placeholder="Ex. 80"></div>
+<div class="field"><label for="budgetPriority">Priorité principale</label><select id="budgetPriority"><option value="equilibre">Répartition équilibrée</option><option value="decoration">Décoration et ambiance</option><option value="traiteur">Restauration et service traiteur</option><option value="coordination">Organisation et coordination</option></select></div>
+<button type="button" class="btn primary" id="calculateBudget">Organiser mon budget</button>
+<div id="budgetResult" class="budget-result" aria-live="polite">Entrez votre budget et le nombre d’invités pour afficher une répartition indicative.</div>
+</div>
+<div class="card">
+<div class="eyebrow">À retenir</div><h3>UN BUDGET RÉALISTE SE CONSTRUIT ENSEMBLE.</h3>
+<p>Le coût final dépend du lieu, du nombre d’invités, du menu, du décor, du matériel, du personnel et de la date.</p>
+<p>Nous étudions votre enveloppe avant de vous proposer des options adaptées. Les montants définitifs seront confirmés dans un devis personnalisé.</p>
+<a class="btn" href="#contact">Parler de mon budget</a>
+</div>
+</div>
+</div>
+</section>
+
 <section id="faq" class="section alt">
 <div class="wrap">
 <div class="eyebrow">Questions fréquentes</div>
@@ -577,6 +675,56 @@ body{background:#fff;color:#171717}
   window.setTimeout(function(){intro.classList.add('is-hidden');},3000);
   window.setTimeout(function(){if(intro.parentNode)intro.parentNode.removeChild(intro);},3900);
   intro.addEventListener('click',function(){intro.classList.add('is-hidden');});
+})();
+</script>
+
+
+<script>
+(function(){
+  var photoInput=document.getElementById('galleryPhotoInput');
+  var photoTitle=document.getElementById('galleryPhotoTitle');
+  var previewButton=document.getElementById('galleryPreviewButton');
+  var previewWrap=document.getElementById('galleryLocalPreview');
+  var previewImg=document.getElementById('galleryPreviewImage');
+  var previewTitle=document.getElementById('galleryPreviewTitle');
+  var photoNotice=document.getElementById('galleryPhotoNotice');
+  if(previewButton){
+    previewButton.addEventListener('click',function(){
+      var file=photoInput&&photoInput.files&&photoInput.files[0];
+      if(!file){photoNotice.textContent='Choisissez une photo avant de lancer l’aperçu.';return;}
+      if(!['image/jpeg','image/png','image/webp'].includes(file.type)){photoNotice.textContent='Format accepté : JPG, PNG ou WEBP.';return;}
+      if(file.size>8*1024*1024){photoNotice.textContent='La photo doit peser moins de 8 Mo.';return;}
+      if(previewImg.dataset.objectUrl)URL.revokeObjectURL(previewImg.dataset.objectUrl);
+      var objectUrl=URL.createObjectURL(file);previewImg.src=objectUrl;previewImg.dataset.objectUrl=objectUrl;
+      previewTitle.textContent=(photoTitle.value||file.name).trim();previewWrap.hidden=false;
+      photoNotice.textContent='Aperçu créé. Pour le publier sur le site pour tous les visiteurs, il faut ensuite ajouter le fichier au dépôt du site.';
+    });
+  }
+  var type=document.getElementById('creatorType'),style=document.getElementById('creatorStyle'),palette=document.getElementById('creatorPalette'),guests=document.getElementById('creatorGuests');
+  function updateCreator(){
+    var t=type.value,s=style.value,p=palette.value,g=guests.value;
+    document.getElementById('creatorPreviewType').textContent=t.toUpperCase();
+    document.getElementById('creatorPreviewStyle').textContent=s;
+    document.getElementById('creatorPreviewGuests').textContent=g?'Nombre approximatif d’invités : '+g:'Votre nombre d’invités apparaîtra ici';
+    var colors={'Bleu ciel, blanc et doré':['#9fd8f0','#ffffff','#c5a45a'],'Rouge, noir et doré':['#d71920','#171717','#c5a45a'],'Blanc, ivoire et champagne':['#ffffff','#f3ead7','#c5a45a'],'Rose poudré et blanc':['#e8b7c8','#ffffff','#d8c4a0'],'Vert sauge et crème':['#a7bca4','#f8f2e5','#d5c59b'],'Couleurs personnalisées':['#9fd8f0','#e8b7c8','#c5a45a']}[p]||['#9fd8f0','#ffffff','#c5a45a'];
+    document.querySelectorAll('#creatorSwatches span').forEach(function(el,i){el.style.background=colors[i]});
+  }
+  [type,style,palette,guests].forEach(function(el){if(el)el.addEventListener('input',updateCreator)});
+  updateCreator();
+  var sendCreator=document.getElementById('sendCreatorWhatsApp');
+  if(sendCreator)sendCreator.addEventListener('click',function(){
+    var message='Bonjour THE MERCURY JUPITER EVENTS, voici mon idée d’événement :%0AType : '+encodeURIComponent(type.value)+'%0AStyle : '+encodeURIComponent(style.value)+'%0APalette : '+encodeURIComponent(palette.value)+'%0ANombre d’invités : '+encodeURIComponent(guests.value||'À préciser')+'%0ADétails : '+encodeURIComponent(document.getElementById('creatorNotes').value||'À discuter');
+    window.open('https://wa.me/50937469553?text='+message,'_blank','noopener');
+  });
+  var calculate=document.getElementById('calculateBudget');
+  if(calculate)calculate.addEventListener('click',function(){
+    var total=Number(document.getElementById('budgetTotal').value),guestCount=Number(document.getElementById('budgetGuests').value),priority=document.getElementById('budgetPriority').value,result=document.getElementById('budgetResult');
+    if(!total||total<1||!guestCount||guestCount<1){result.textContent='Veuillez entrer un budget positif et un nombre d’invités valide.';return;}
+    var shares=priority==='decoration'?[.45,.20,.20,.15]:priority==='traiteur'?[.20,.45,.20,.15]:priority==='coordination'?[.20,.20,.40,.20]:[.30,.30,.25,.15];
+    var labels=['Décoration & ambiance','Restauration / service traiteur','Organisation & coordination','Réserve / imprévus'];
+    var fmt=function(n){return Math.round(n).toLocaleString('fr-FR')+' HTG'};
+    result.innerHTML='<strong>Répartition indicative — '+fmt(total)+'</strong><ul>'+labels.map(function(label,i){return '<li>'+label+' : <strong>'+fmt(total*shares[i])+'</strong> ('+Math.round(shares[i]*100)+' %)</li>'}).join('')+'</ul><p>Budget indicatif par invité : <strong>'+fmt(total/guestCount)+'</strong>.</p><small>Cette répartition est un outil de préparation, pas un tarif de prestation ni un devis.</small>';
+  });
 })();
 </script>
 
