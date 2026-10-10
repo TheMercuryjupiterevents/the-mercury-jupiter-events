@@ -159,9 +159,25 @@ body{background:#fff;color:#171717}
 @media(max-width:850px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}}
 @media(max-width:680px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.team-card{padding:8px}.team-card h3{font-size:.78rem}.team-role{font-size:.65rem}.team-photo{font-size:.48rem}.hero-event-label{font-size:.62rem}.section.dark .wrap>p{font-size:1rem!important}}
 
+
+/* Intro BIENVENUE — ouverture élégante */
+#welcome-intro{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:#050505;color:#d7b66a;opacity:1;visibility:visible;transition:opacity .75s ease,visibility .75s ease}
+#welcome-intro.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
+#welcome-intro .welcome-word{display:flex;gap:.035em;padding:0 14px;font:500 clamp(2rem,8vw,5.6rem)/1 Georgia,"Times New Roman",serif;letter-spacing:.12em;text-align:center}
+#welcome-intro .welcome-word span{display:inline-block;opacity:0;transform:translateY(12px);animation:welcome-letter .32s ease forwards;animation-delay:calc(var(--i)*.16s)}
+@keyframes welcome-letter{to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){#welcome-intro .welcome-word span{animation:none;opacity:1;transform:none}#welcome-intro{transition:none}}
+
 </style>
 </head>
 <body>
+
+<div id="welcome-intro" role="status" aria-label="Bienvenue">
+  <div class="welcome-word" aria-label="BIENVENUE">
+    <span style="--i:0">B</span><span style="--i:1">I</span><span style="--i:2">E</span><span style="--i:3">N</span><span style="--i:4">V</span><span style="--i:5">E</span><span style="--i:6">N</span><span style="--i:7">U</span><span style="--i:8">E</span>
+  </div>
+</div>
+
 <header class="nav">
 <div class="wrap navin">
 <a class="brand" href="#accueil" aria-label="THE MERCURY JUPITER EVENTS"><img src="assets/logo-rond-officiel.jpg" alt="Logo officiel THE MERCURY JUPITER EVENTS"><span class="brand-name">THE MERCURY JUPITER EVENTS<small>ÉVÉNEMENTIEL</small></span></a>
@@ -403,5 +419,16 @@ body{background:#fff;color:#171717}
 <div class="wrap footerbottom"><span>© 2026 THE MERCURY JUPITER ÉVÉNEMENTS</span><span>CONCEVOIR DES EXPÉRIENCES. CRÉER DES MOMENTS. CONSTRUIRE L’AVENIR.</span></div>
 </footer>
 <a class="wa" href="https://wa.me/50937469553?text=Bonjour%2C%20je%20souhaiterais%20obtenir%20davantage%20d%E2%80%99informations%20concernant%20les%20services%20de%20THE%20MERCURY%20JUPITER%20EVENTS%20et%20%C3%A9changer%20avec%20votre%20%C3%A9quipe%20au%20sujet%20de%20mon%20projet%20%C3%A9v%C3%A9nementiel.%20Merci%20d%E2%80%99avance%20pour%20votre%20retour." aria-label="Contacter THE MERCURY JUPITER EVENTS sur WhatsApp">WhatsApp</a>
+
+<script>
+(function(){
+  var intro=document.getElementById('welcome-intro');
+  if(!intro)return;
+  window.setTimeout(function(){intro.classList.add('is-hidden');},3000);
+  window.setTimeout(function(){if(intro.parentNode)intro.parentNode.removeChild(intro);},3900);
+  intro.addEventListener('click',function(){intro.classList.add('is-hidden');});
+})();
+</script>
+
 </body>
 </html>
